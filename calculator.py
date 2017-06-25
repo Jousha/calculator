@@ -90,7 +90,7 @@ class Calculator(QWidget):
                 h_layout_seven.addWidget(self.btn)
             self.number_dict[i] = self.btn
 
-        # Initialise remainig buttons for h layouts seven, four, one and zero
+        # Initialise remaining buttons for h layouts seven, four, one and zero
         self.plus = self.create_button("+", (95, 60), h_layout_seven)
         h_layout_seven.setAlignment(Qt.AlignCenter)
         
@@ -183,6 +183,7 @@ class Calculator(QWidget):
         '''
         Checks that the user does not enter unusable characters such as letters.
         '''
+        acceptable_list = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "(", ")", "/", "*", "-", "+"]
         text = self.answer_box.text()
         for i in text:
             try:
